@@ -18,7 +18,7 @@ public class Theke {
         return count == 0;
     }
 
-    public synchronized boolean ablegen(Tablett t){
+    public boolean ablegen(Tablett t){
         if(isFull()) return false;
         // not full:
         tabletts[count]= t;
@@ -27,10 +27,14 @@ public class Theke {
     }
     
 
-    public synchronized Tablett wegnehmen(){
+    public Tablett wegnehmen(){
         if(isEmpty()) return null;
         // not empty:
         count--;
         return tabletts[count];
+    }
+    
+    public int count(){
+        return count;
     }
 }
