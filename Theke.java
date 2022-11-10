@@ -8,7 +8,7 @@
 public class Theke {
     private final int N = 10;
     private Tablett[] tabletts = new Tablett[N];
-    private int count = N;  // erster freier Platz im Array
+    private int count = 0;  // erster freier Platz im Array
 
     private boolean isFull(){
         return count == N;
